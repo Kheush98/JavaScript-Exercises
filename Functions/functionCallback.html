@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        function ask(question, yes, no) {
+            if (confirm(question)) yes();
+            else no();
+        }
+
+        function showOk() {
+        alert( "You agreed." );
+        }
+
+        function showCancel() {
+        alert( "You canceled the execution." );
+        }
+
+        // utilisation: les fonctions showOk, showCancel sont transmises en tant qu'arguments à ask
+        ask("Do you agree?", showOk, showCancel);
+
+        //Here, the functions are declared directly in the ask(...) call.
+       /* function ask(question, yes, no) {
+            if (confirm(question)) yes();
+            else no();
+        }
+
+        ask(
+        "Do you agree?",
+        function() { alert("You agreed."); },
+        function() { alert("You canceled the execution."); }
+        ); */
+    </script>
+</body>
+</html>
