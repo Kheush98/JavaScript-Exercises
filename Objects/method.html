@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        let calculator = {
+            read() {      
+                this.a = +prompt('Entrer la valeur de a', 1);
+                this.b = +prompt('Entrer la valeur de b', 1);
+            },
+            sum() {
+                return this.a + this.b;
+            },
+            multi() {
+                return this.a * this.b;
+            }
+        };
+
+        calculator.read();
+        alert(calculator.sum());
+        alert(calculator.multi());
+    </script>
+</body>
+</html>
