@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+
+        function sumInput() {
+            let tab = [];
+            let input, sum = 0;
+            do {
+                input = prompt('Enter un nombre: ', '0');
+                if (isNaN(input) || input === "" || input === null) break;
+                tab.push(+input);  
+            } while (true);
+
+            for (let i of tab) sum += i;
+            alert(sum);
+        }
+        sumInput();
+    </script>
+</body>
+</html>
