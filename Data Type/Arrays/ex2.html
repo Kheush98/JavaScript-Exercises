@@ -21,6 +21,15 @@
             for (let i of tab) sum += i;
             alert(sum);
         }
+        let users = [
+                {id: 1, name: "John"},
+                {id: 2, name: "Pete"},
+                {id: 3, name: "Mary"}
+                ];
+
+        alert(users.findIndex(item => item.name === 'John'))
+        // let user = users.find(item => item.id == 4);
+        // if(user) {alert(user.name);} 
         sumInput();
     </script>
 </body>

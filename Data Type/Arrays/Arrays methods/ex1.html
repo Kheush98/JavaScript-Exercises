@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        function camelize(str) {
+            let tab = str.split('-');
+            // alert(tab);
+            tab = tab.map((item, index) => {
+                if(index != 0) {
+                    return item.at(0).toUpperCase()+item.slice(1)
+                } else {
+                    return item;
+                }
+            });
+            // alert(tab);
+            return tab.join('');
+        }
+
+        alert(camelize("background-color"));
+        alert(camelize("list-style-image"));
+        alert(camelize("-webkit-transition"));
+    </script>
+</body>
+</html>
